@@ -18,12 +18,12 @@ def dump_pipeline(pipeline_to_save) -> None:
     """Args : pipeline_to_save
         Return : None"""
     joblib.dump(pipeline_to_save, os.path.join(config.TRAINED_MODELS_PATH, config.MODEL))
-    print("Serialization of pipeline is done")
+    print("Pipeline dumped successfully")
 
 # Deserialization
 def load_pipeline(pipeline_to_load) -> ClassifierMixin:
     """Args : pipeline_to_load
         Return : ClassifierMixin (Model)"""
     classifier = joblib.load(os.path.join(config.TRAINED_MODELS_PATH, config.MODEL))
-    print(f"Deserialization of pipeline is done; returning {classifier.__class__}")
+    print("Pipeline loaded successfully")
     return classifier
