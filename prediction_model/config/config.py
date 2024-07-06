@@ -1,7 +1,5 @@
 import pathlib
 import os
-import sys
-# sys.path.append("C:\\Users\\admin\\OneDrive\\Desktop\\ML Ops Workspace\\3-Packaging ML model\\3-3Folder_hierarchy_for_ML")
 import prediction_model
 
 # REQUIRED PATHS

@@ -3,8 +3,6 @@ import numpy as np
 from typing_extensions import Union
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.preprocessing import LabelEncoder
-import sys
-# sys.path.append("C:\\Users\\admin\\OneDrive\\Desktop\\ML Ops Workspace\\3-Packaging ML model\\3-3Folder_hierarchy_for_ML\\prediction_model")
     
 class MeanImputer(BaseEstimator, TransformerMixin):
     def __init__(self, cols:list) -> None:
@@ -23,7 +21,7 @@ class MeanImputer(BaseEstimator, TransformerMixin):
     def transform(self, X:pd.DataFrame) -> pd.DataFrame:
         X = X.copy()
         for col in self.cols:
-            X[col].fillna(self.mean_dict[col], inplace=True)
+            X[col] = X[col].fillna(self.mean_dict[col])
         return X
     
 class ModeImputer(BaseEstimator, TransformerMixin):
@@ -43,7 +41,7 @@ class ModeImputer(BaseEstimator, TransformerMixin):
     def transform(self, X:pd.DataFrame) -> pd.DataFrame:
         X = X.copy()
         for col in self.cols:
-            X[col].fillna(self.mode_dict[col], inplace=True)
+            X[col] = X[col].fillna(self.mode_dict[col])
         return X
     
 class LabelEncode(BaseEstimator, TransformerMixin):
@@ -78,7 +76,7 @@ class LogTransform(BaseEstimator, TransformerMixin):
             """
         self.X = X.copy()
         for col in self.cols:
-            self.X[col] = X[col].apply(lambda x: 0.0001 if x == 0 else x)
+            self.X[col] = self.X[col].apply(lambda x: 0.0001 if x == 0 else x)
         return self
     
     def transform(self, X:pd.DataFrame) -> pd.DataFrame:
@@ -104,7 +102,7 @@ class DropColumns(BaseEstimator, TransformerMixin):
         """Args: Nothing to show
             Return: X (with dropped columns)"""
         X = X.copy()
-        X.drop(self.cols, axis='columns', inplace=True)
+        X = X.drop(self.cols, axis='columns')
         return X
 
 
