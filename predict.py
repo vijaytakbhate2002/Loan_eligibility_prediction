@@ -16,7 +16,6 @@ def predict() -> None:
     user_data = user_data[config.FEATURES]
     pred = classification_pipeline.predict(X=user_data)
     output = np.where(pred == 0,'N','Y')
-    print(output)
     return output
 
 if __name__ == "__main__":
