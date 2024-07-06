@@ -19,4 +19,4 @@ def predict() -> None:
     return output
 
 if __name__ == "__main__":
-    predict()
+    res = predict()

@@ -1,5 +1,3 @@
-import sys
-# sys.path.append("C:\\Users\\admin\\OneDrive\\Desktop\\ML Ops Workspace\\3-Packaging ML model\\Folder_hierarchy_for_ML_3\\prediction_model")
 from ..config import config
 import pandas as pd
 import os
