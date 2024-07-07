@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import os
 
-classification_pipeline = dh.load_pipeline(config.MODEL)
+# classification_pipeline = dh.load_pipeline(config.MODEL)
 
 def predict() -> None:
     """Args: None
@@ -20,3 +20,4 @@ def predict() -> None:
 
 if __name__ == "__main__":
     res = predict()
+ 
