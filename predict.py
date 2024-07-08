@@ -9,25 +9,26 @@ warnings.filterwarnings('ignore')
 
 classification_pipeline = dh.load_pipeline(config.MODEL)
 
-# def predict() -> None:
-#     """Args: None
-#         Return: None
-        
-#         func: takes user data, process it, do prediction"""
-#     user_data = pd.read_csv(os.path.join(config.DATASETS_PATH, config.TEST_DATA))
-#     user_data = user_data[config.FEATURES]
-#     pred = classification_pipeline.predict(X=user_data)
-#     output = np.where(pred == 0,'N','Y')
-#     return output
-
-def predict(user_data) -> None:
+def predict() -> np.ndarray:
     """Args: None
-        Return: None
+        Return: np.ndarray
         
         func: takes user data, process it, do prediction"""
+    user_data = pd.read_csv(os.path.join(config.DATASETS_PATH, config.TEST_DATA))
+    user_data = user_data[config.FEATURES]
     pred = classification_pipeline.predict(X=user_data)
-    output = np.where(pred == 0, 'N','Y')
+    output = np.where(pred == 0,'N','Y')
     return output
+
+# def predict(user_data) -> np.ndarray:
+#     """Args: None
+#         Return: np.ndarray
+        
+#         func: takes user data, process it, do prediction"""
+#     pred = classification_pipeline.predict(X=user_data)
+#     output = np.where(pred == 0, 'N','Y')
+#     return output
 
 if __name__ == "__main__":
     res = predict()
+
