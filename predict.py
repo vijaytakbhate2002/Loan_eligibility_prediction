@@ -20,15 +20,6 @@ def predict() -> np.ndarray:
     output = np.where(pred == 0,'N','Y')
     return output
 
-# def predict(user_data) -> np.ndarray:
-#     """Args: None
-#         Return: np.ndarray
-        
-#         func: takes user data, process it, do prediction"""
-#     pred = classification_pipeline.predict(X=user_data)
-#     output = np.where(pred == 0, 'N','Y')
-#     return output
-
 if __name__ == "__main__":
     res = predict()
 
