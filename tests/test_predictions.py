@@ -1,8 +1,9 @@
 import sys
-sys.path.append("C:\\Users\\admin\\OneDrive\\Desktop\\ML Ops Workspace\\3-Packaging ML model\\3-3Folder_hierarchy_for_ML")
+sys.path.append('\\'.join(__file__.split('\\')[:-2]))
+print('\\'.join(__file__.split('\\')[:-2]))
 from prediction_model.config import config
 import os
-from predict import predict 
+from prediction_model.predict import predict 
 import pandas as pd
 import numpy as np
 import pytest
