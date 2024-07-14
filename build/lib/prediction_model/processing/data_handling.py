@@ -1,4 +1,6 @@
-from ..config import config
+import sys
+sys.path.append('\\'.join(__file__.split('\\')[:-2]))
+from config import config
 import pandas as pd
 import os
 import joblib

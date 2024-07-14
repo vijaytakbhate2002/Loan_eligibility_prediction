@@ -20,8 +20,10 @@ Requires-Dist: pandas==2.2.2
 Requires-Dist: pathlib==1.0.1
 Requires-Dist: python-dateutil==2.9.0.post0
 Requires-Dist: pytz==2024.1
+Requires-Dist: pytest==8.2.2
 Requires-Dist: scikit-learn==1.5.1
 Requires-Dist: scipy==1.14.0
+Requires-Dist: setuptools==70.3.0
 Requires-Dist: six==1.16.0
 Requires-Dist: threadpoolctl==3.5.0
 Requires-Dist: typing_extensions==4.12.2

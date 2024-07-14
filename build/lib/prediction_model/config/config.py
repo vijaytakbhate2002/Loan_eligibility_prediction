@@ -1,9 +1,8 @@
 import pathlib
 import os
-import prediction_model
 
 # REQUIRED PATHS
-ROOT_PATH = pathlib.Path(prediction_model.__file__).resolve().parent
+ROOT_PATH = pathlib.Path('\\'.join(__file__.split('\\')[:-1])).resolve().parent
 DATASETS_PATH = os.path.join(ROOT_PATH, 'datasets')
 TRAINED_MODELS_PATH = os.path.join(ROOT_PATH, 'trained_models')
 

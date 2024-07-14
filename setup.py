@@ -16,7 +16,7 @@ pwd = os.path.abspath(os.path.dirname(__file__))
 # Get the list of packages to be installed
 def list_reqs(fname='requirements.txt'):
     try:
-        with io.open(os.path.join(pwd, fname), encoding='utf-16') as f:
+        with io.open(os.path.join(pwd, fname), encoding='utf-8') as f:
             return f.read().splitlines()
     except FileNotFoundError:
         pass
