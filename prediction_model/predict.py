@@ -1,3 +1,5 @@
+import sys
+sys.path.append('\\'.join(__file__.split('\\')[:-1]))
 from processing import data_handling as dh 
 from config import config
 import numpy as np

@@ -1,6 +1,5 @@
 import sys
 sys.path.append('\\'.join(__file__.split('\\')[:-2]))
-print('\\'.join(__file__.split('\\')[:-2]))
 from prediction_model.config import config
 import os
 from prediction_model.predict import predict 
