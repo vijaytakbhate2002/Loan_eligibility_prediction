@@ -1,5 +1,5 @@
-from prediction_model.config import config
-from prediction_model.processing import preprocessing
+from config import config
+from processing import preprocessing
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.linear_model import LogisticRegression

@@ -1,14 +1,12 @@
-import io # provides compatibility between python 2 and python 3
+import io 
 import os
 from pathlib import Path
-
 from setuptools import find_packages, setup
-
 
 # Metadata of package
 NAME = 'prediction_model'
 DESCRIPTION = 'Loan Prediction Model'
-URL = 'https://github.com/vijaytakbhate2002'
+URL = 'https://github.com/vijaytakbhate2002/Loan_eligibility_prediction.git'
 EMAIL = 'vijaytakbhate20@gmail.com'
 AUTHOR = 'Vijay Dipak Takbhate'
 REQUIRES_PYTHON = '>=3.12.4'

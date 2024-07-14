@@ -1,6 +1,5 @@
-from pipeline import classification_pipeline as pipe
-from prediction_model.processing import data_handling as dh 
-from prediction_model.config import config
+from processing import data_handling as dh 
+from config import config
 import numpy as np
 import pandas as pd
 import os
