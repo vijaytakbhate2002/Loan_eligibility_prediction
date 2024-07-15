@@ -3,7 +3,6 @@ from processing import preprocessing
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.linear_model import LogisticRegression
-from sklearn.impute import SimpleImputer
 
 classification_pipeline = Pipeline([
     ('MeanImputer', preprocessing.MeanImputer(cols=config.NUM_FEATURES)),
