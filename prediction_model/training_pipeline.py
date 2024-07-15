@@ -16,6 +16,3 @@ def train_pipe() -> None:
     train_y = train_data[config.TARGET].map({'N':0, 'Y':1})
     pipe.fit(train_data[config.FEATURES], train_y)
     dh.dump_pipeline(pipe)
-
-if __name__ == "__main__":
-    train_pipe()
