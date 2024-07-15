@@ -21,3 +21,4 @@ def predict(user_data:pd.DataFrame) -> str:
     pred = classification_pipeline.predict(user_data)
     output = 'N' if pred[0] == 0 else 'Y'
     return output
+
